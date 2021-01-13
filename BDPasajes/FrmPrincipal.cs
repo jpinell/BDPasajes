@@ -34,5 +34,17 @@ namespace BDPasajes
             FrmClienteSexo frm = new FrmClienteSexo();
             frm.ShowDialog();
         }
+
+        private void busToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBus frm = new FrmBus();
+            frm.ShowDialog();
+        }
+
+        private void viajesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmViajes frm = new FrmViajes();
+            frm.ShowDialog();
+        }
     }
 }

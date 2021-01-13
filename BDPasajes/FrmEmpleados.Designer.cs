@@ -34,6 +34,8 @@ namespace BDPasajes
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTotalSueldos = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +44,7 @@ namespace BDPasajes
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmpleados.Location = new System.Drawing.Point(12, 33);
             this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.Size = new System.Drawing.Size(673, 292);
+            this.dgvEmpleados.Size = new System.Drawing.Size(673, 239);
             this.dgvEmpleados.TabIndex = 0;
             // 
             // btnLimpiar
@@ -81,11 +83,32 @@ namespace BDPasajes
             this.label1.TabIndex = 4;
             this.label1.Text = "Ingrese Nombre Completo:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(408, 303);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Total Sueldos:";
+            // 
+            // txtTotalSueldos
+            // 
+            this.txtTotalSueldos.BackColor = System.Drawing.Color.White;
+            this.txtTotalSueldos.Location = new System.Drawing.Point(489, 300);
+            this.txtTotalSueldos.Name = "txtTotalSueldos";
+            this.txtTotalSueldos.ReadOnly = true;
+            this.txtTotalSueldos.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalSueldos.TabIndex = 9;
+            this.txtTotalSueldos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 337);
+            this.Controls.Add(this.txtTotalSueldos);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNombre);
@@ -108,5 +131,7 @@ namespace BDPasajes
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTotalSueldos;
     }
 }

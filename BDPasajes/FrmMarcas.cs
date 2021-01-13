@@ -53,6 +53,7 @@ namespace BDPasajes
         {
             txtMarca.Text = string.Empty;
             ListarMarcas();
+            txtMarca.Focus();
         }
     }
 }

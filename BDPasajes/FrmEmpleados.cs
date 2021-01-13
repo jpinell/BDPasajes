@@ -13,15 +13,18 @@ namespace BDPasajes
             InitializeComponent();
         }
 
+        private decimal sueldo = 0;
         private void FrmEmpleados_Load(object sender, EventArgs e)
         {
             ListarEmpleados();
         }
 
+
         private void ListarEmpleados()
         {
             //NOMBRE COMPLETO
             BDPasajeEntities db = new BDPasajeEntities();
+            sueldo = 0;
             var consulta = (from empleado in db.Empleado //Esta es la tabla
                             where empleado.BHABILITADO == 1
                             select new
@@ -34,12 +37,20 @@ namespace BDPasajes
                             }).ToList();
 
             dgvEmpleados.DataSource = consulta;
+
+            foreach (var item in consulta)
+            {
+                sueldo += (decimal)item.SUELDO;
+            }
+
+            txtTotalSueldos.Text = string.Format("{0:N2}", sueldo);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string nombreCompleto = txtNombre.Text;
             BDPasajeEntities db = new BDPasajeEntities();
+            sueldo = 0;
             var consulta = (from empleado in db.Empleado //Esta es la tabla
                             where empleado.BHABILITADO == 1
                             && (empleado.NOMBRE + " " + empleado.APPATERNO
@@ -54,12 +65,20 @@ namespace BDPasajes
                             }).ToList();
 
             dgvEmpleados.DataSource = consulta;
+
+            foreach (var item in consulta)
+            {
+                sueldo += (decimal)item.SUELDO;
+            }
+
+            txtTotalSueldos.Text = string.Format("{0:N2}", sueldo);
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtNombre.Text = string.Empty;
             ListarEmpleados();
+            txtNombre.Focus();
         }
     }
 }

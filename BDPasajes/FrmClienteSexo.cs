@@ -35,5 +35,25 @@ namespace BDPasajes
 
             dgvCliente.DataSource = consulta;
         }
+
+        private void txtFiltroNombre_TextChanged(object sender, EventArgs e)
+        {
+            string nombreCompleto = txtFiltroNombre.Text;
+            BDPasajeEntities db = new BDPasajeEntities();
+            var consulta = (from cliente in db.Cliente
+                            join sexo in db.Sexo
+                            on cliente.IIDSEXO equals sexo.IIDSEXO
+                            where cliente.BHABILITADO == 1
+                            && (cliente.NOMBRE + " " + cliente.APPATERNO + " " + cliente.APMATERNO).Contains(nombreCompleto)
+                            select new
+                            {
+                                cliente.IIDCLIENTE,
+                                NombreCompleto = cliente.NOMBRE + " " + cliente.APPATERNO + " " + cliente.APMATERNO,
+                                cliente.EMAIL,
+                                sexo.NOMBRE
+                            }).ToList();
+
+            dgvCliente.DataSource = consulta;
+        }
     }
 }

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDPasajes", "BDPasajes\BDPasajes.csproj", "{FDBEE26E-8213-488B-8153-1BB0656B788F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDBEE26E-8213-488B-8153-1BB0656B788F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBEE26E-8213-488B-8153-1BB0656B788F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBEE26E-8213-488B-8153-1BB0656B788F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBEE26E-8213-488B-8153-1BB0656B788F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DFE8DAA-367C-4EF5-84A4-DC19BFAAC927}
+	EndGlobalSection
+EndGlobal
